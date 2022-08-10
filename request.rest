@@ -1,0 +1,104 @@
+//create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+# {
+#     "name": "wayan yoga krisna",
+#     "email": "admin@admin.com",
+#     "password": "123456",
+#     "confPassword": "123456",
+#     "role": "admin"
+# }
+{
+    "name": "jhon doe",
+    "email": "user@user.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+###
+//get all user
+GET http://localhost:5000/users
+
+###
+//get one user
+GET http://localhost:5000/users/92688056-3920-4987-a484-a270b7280890
+
+###
+//updatet users
+PATCH http://localhost:5000/users/b7f3f405-01f4-49ca-bc03-c9c5cd9b088c
+Content-Type: application/json
+
+{
+    "name": "jhon updated",
+    "email": "user@user.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+//delete a users
+DELETE http://localhost:5000/users/6623e23a-59b9-4f62-b680-9ff00ff1ca3f
+
+###
+//login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "user@user.com",
+    "password": "123456"
+}
+
+###
+//login  admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@admin.com",
+    "password": "123456"
+}
+
+###
+//me
+GET http://localhost:5000/me
+
+###
+//logout
+
+DELETE http://localhost:5000/logout
+
+###
+//get all product
+GET http://localhost:5000/products
+
+###
+//input product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "product 688",
+    "price": 1000
+}
+
+###
+//get single product
+GET http://localhost:5000/products/bc695d7d-638a-48fc-b2c8-fbabe1638eb5
+
+###
+//update product
+PATCH http://localhost:5000/products/217a713c-ba2e-40c1-b0f8-abfa580cb32f
+Content-Type: application/json
+
+{
+    "name": "product updated",
+    "price": 1800
+}
+
+###
+//deleted product
+DELETE http://localhost:5000/products/217a713c-ba2e-40c1-b0f8-abfa580cb32f
